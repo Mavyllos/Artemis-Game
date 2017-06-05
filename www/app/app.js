@@ -17,6 +17,18 @@ angular.module('artemisApp', ['ionic'])
 
   $stateProvider
 
+    .state('login', {
+      abstract: false,
+      url:'/login',
+      templateUrl: 'app/login/login.html'
+    })
+
+    .state('register', {
+      abstract: false,
+      url:'/register',
+      templateUrl: 'app/registration/registration.html'
+    })
+
     .state('dashboard', {
       abstract: true,
       url: '/dashboard',
