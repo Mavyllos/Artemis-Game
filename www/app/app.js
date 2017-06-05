@@ -13,7 +13,7 @@ angular.module('artemisApp', ['ionic'])
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider){
 
-  $ionicConfigProvider.tabs.position('bottom');
+  $ionicConfigProvider.tabs.position('top');
 
   $stateProvider
 
