@@ -1,6 +1,6 @@
 'use strict';
 angular
-  .module('app')
+  .module('artemisApp')
   .factory('UserService', UserService)
   UserService.$inject = ['$http']
 

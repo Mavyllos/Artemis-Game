@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('app')
+  .module('artemisApp')
   .controller('loginCtrl', loginCtrl);
 
   loginCtrl.$inject = ['UserService']
