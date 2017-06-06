@@ -17,6 +17,12 @@ angular.module('artemisApp', ['ionic'])
 
   $stateProvider
 
+    .state('app', {
+      abstract: true,
+      url: '/app',
+      templateUrl: "app/layout/menu-layout.html"
+    })
+
     .state('login', {
       abstract: false,
       url:'/login',
@@ -29,16 +35,38 @@ angular.module('artemisApp', ['ionic'])
       templateUrl: 'app/registration/registration.html'
     })
 
-    .state('dashboard', {
-      abstract: true,
+    .state('app.dashboard', {
       url: '/dashboard',
-      templateUrl: 'app/dashboard/dashboard.html'
-  })
+      views: {
+        'mainContent': {
+          templateUrl: 'app/dashboard/dashboard.html'
+        }
+      }
+    })
 
-    .state('app', {
-      abstract: true,
-      url: '/app',
-      templateUrl: "app/layout/menu-layout.html"
+    .state('app.mygames', {
+      url: '/mygames',
+      views: {
+        'mainContent': {
+          templateUrl: 'app/games/mygames.html'
+        }
+      }
+    })
+    .state('app.game-detail', {
+      url: '/games/:id',
+      views: {
+        'mainContent': {
+          templateUrl: 'app/games/game-detail.html'
+        }
+      }
+    })
+    .state('app.invites', {
+      url: '/game-invite/:id',
+      views: {
+        'mainContent': {
+          templateUrl: 'app/invites/game-invites.html'
+        }
+      }
     });
 
   $urlRouterProvider.otherwise('/app/dashboard');
