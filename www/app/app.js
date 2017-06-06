@@ -52,6 +52,7 @@ angular.module('artemisApp', ['ionic'])
         }
       }
     })
+
     .state('app.game-detail', {
       url: '/games/:id',
       views: {
@@ -60,6 +61,16 @@ angular.module('artemisApp', ['ionic'])
         }
       }
     })
+
+    .state('app.create-game', {
+      url: '/create',
+      views: {
+        'mainContent': {
+          templateUrl: 'app/create/create-game.html'
+        }
+      }
+    })
+
     .state('app.invites', {
       url: '/game-invite/:id',
       views: {
