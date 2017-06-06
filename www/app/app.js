@@ -24,9 +24,8 @@ angular.module('artemisApp', ['ionic'])
     })
 
     .state('login', {
-      abstract: false,
-      url:'/login',
-      templateUrl: 'app/login/login.html'
+      url:'/',
+      templateUrl: './app/login/login.html'
     })
 
     .state('register', {
@@ -80,6 +79,6 @@ angular.module('artemisApp', ['ionic'])
       }
     });
 
-  $urlRouterProvider.otherwise('/app/dashboard');
+  $urlRouterProvider.otherwise('/');
 
 });
