@@ -7,25 +7,27 @@ angular
   function UserService($http) {
     var service = {};
 
-    service.GetByUsername = getByUserName;
+    service.getByUsername = getByUsername;
     service.Login = Login;
 
     return service;
 
-    function GetByUsername(user) {
-      return $http.get(`https://artemis-api.herokuapp.com/?/username=${user.username}`, user)
+    function getByUsername(username) {
+      return $http.get(`https://artemis-api.herokuapp.com/users/?user_name=${username}`)
       .then(handleSuccess, handleError('Error getting user by username'))
     }
 
-    function login(username, password) {
+    function Login(username, password, callback) {
       var response
-      getByUserName(username)
+      getByUsername(username)
       .then(function (user) {
+        user = user.result[0]
         if (user !== null && user.password === password) {
-          response = {sucess: true}
+          response = {success: true}
         } else {
-          response = {sucess: false, message: 'Wrong username or password'}
+          response = {success: false, message: 'Wrong username or password'}
         }
+        callback(response)
       })
     }
 
@@ -38,5 +40,5 @@ angular
     return function () {
       return {sucess: false, message: error}
     }
-}
+  }
 }

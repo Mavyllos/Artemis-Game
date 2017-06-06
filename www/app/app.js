@@ -25,7 +25,9 @@ angular.module('artemisApp', ['ionic'])
 
     .state('login', {
       url:'/',
-      templateUrl: './app/login/login.html'
+      templateUrl: './app/login/login.html',
+      controller: 'loginCtrl',
+      controllerAs: '$ctrl'
     })
 
     .state('register', {
