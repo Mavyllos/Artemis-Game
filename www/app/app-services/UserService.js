@@ -13,7 +13,7 @@ angular
     return service;
 
     function GetByUsername(user) {
-      return $http.post(`https://artemis-api.herokuapp.com/${user.username}`, user)
+      return $http.get(`https://artemis-api.herokuapp.com/?/username=${user.username}`, user)
       .then(handleSuccess, handleError('Error getting user by username'))
     }
 

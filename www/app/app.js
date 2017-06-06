@@ -29,7 +29,6 @@ angular.module('artemisApp', ['ionic'])
     })
 
     .state('register', {
-      abstract: false,
       url:'/register',
       templateUrl: 'app/registration/registration.html'
     })
