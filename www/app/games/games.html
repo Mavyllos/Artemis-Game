@@ -1,0 +1,45 @@
+  <ion-view ng-controller="gamesCtrl as vm">
+    <ion-pane>
+      <ion-content class="has-tabs-top">
+        <div class="list">
+          <div class="item item-icon-right"
+              ng-repeat="game in vm.games" ng-click="vm.selectGame(game.id)">
+          <p>
+            <span class="alignleft"><b>When: </b><br>{{game.start_time | date: "MM/dd/yyyy 'at' h:mma"}}</span>
+            <span class="alignright"><b>Players: </b><br>{{game.players}} None</span>
+          </p>
+          <br>
+          <p>
+            <span class="alignleft"><b>Name: </b><br>{{game.name}}</span>
+            <span class="alignright"><b>Status:  </b><br>{{game.status}}</span>
+          </p>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+          </div>
+          </div>
+        </div>
+      </ion-content>
+    </ion-pane>
+  </ion-view>
+
+<!-- <ion-nav-view ng-controller="gamesCtrl as vm">
+  <ion-pane>
+    <ion-content class="has-tabs-top">
+      <div class="list">
+        <a class="item item-icon-right"
+            ionic-repeat="game in vm.games" ionic-click="vm.selectGame(game.id)">
+        <p>
+          <span class="alignleft"><b>When: </b><br>{{game.start_time | date: "MM/dd/yyyy 'at' h:mma"}}</span>
+          <span class="alignright"><b>Players: </b><br>{{game.players}} None</span>
+        </p>
+        <br>
+        <p>
+          <span class="alignleft"><b>Name: </b><br>{{game.name}}</span>
+          <span class="alignright"><b>Status:  </b><br>{{game.status}}</span>
+        </p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        </a>
+        </div>
+      </div>
+    </ion-content>
+  </ion-pane>
+</ion-nav-view> -->

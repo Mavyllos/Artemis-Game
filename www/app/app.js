@@ -44,11 +44,11 @@ angular.module('artemisApp', ['ionic'])
       }
     })
 
-    .state('app.mygames', {
-      url: '/mygames',
+    .state('app.games', {
+      url: '/games',
       views: {
         'mainContent': {
-          templateUrl: 'app/games/mygames.html'
+          templateUrl: 'app/games/games.html'
         }
       }
     })
@@ -80,6 +80,6 @@ angular.module('artemisApp', ['ionic'])
       }
     });
 
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/app/dashboard');
 
 });
