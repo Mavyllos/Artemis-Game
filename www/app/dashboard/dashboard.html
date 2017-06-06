@@ -1,9 +1,52 @@
-<ion-view>
+<ion-nav-view>
   <ion-pane>
     <ion-content class="has-tabs-top">
       <div>
         <h1>Hiya! I'm a dashboard!</h1>
       </div>
+    </ion-content>
+  </ion-pane>
+</ion-nav-view>
+
+<ion-nav-view>
+  <ion-pane>
+    <ion-content class="has-tabs-top">
+      <div class="row">
+        <div class="col col-50">
+          <div class="card">
+            <div class="item item-text-wrap text-center"><p><b>Total Games: </b><br>19</p></div>
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="card">
+            <div class="item item-text-wrap text-center"><p><b>Joined Games: </b><br>2</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-80 col-offset-10">
+          <div class="card">
+            <p class="text-center"><b>Notifications</b></p>
+            <div class="item item-text-wrap text-center"><p><b>Pending Invites: </b><br><a ui-sref="app.invites">3</a></p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-100">
+          <div class="card">
+            <p class="text-center"><b>Upcoming Game: </b></p>
+            <div class="item item-text-wrap text-center">
+            <p><b>Start Location: </b><br><a href="#">Pioneer Square, Seattle, WA</a></p>
+            <p><b>Start Date and Time: </b><br>July 5th, 2017 @ 6:00AM</p>
+            <p><b>Description: </b><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </ion-content>
   </ion-pane>
 </ion-nav-view>
