@@ -1,9 +1,25 @@
-<ion-view>
+<ion-view ng-controller="gameInvitesCtrl as vm">
   <ion-pane>
     <ion-content class="has-tabs-top">
-      <div>
-        <h1>Wanna play a game?</h1>
+      <div class="list">
+        <div class="item item-icon-right"
+            ng-repeat="invite in vm.gameInvites | filter:{invite_status:'pending'}">
+            <p>
+              <span class="alignleft"><b>Name: </b><br>Name should appear here</span>
+              <span class="alignright"><b>Status: </b><br>{{invite.invite_status}}</span>
+            </p>
+            <br>
+            <p>
+            <ion-buttons start>
+              <button class="button button-small button-balanced ">Accept</button>&nbsp;
+              <button class="button button-small button-assertive">Decline</button>
+            </p>
+            </ion-buttons start>
+            <i class="icon ion-chevron-right icon-accessory" ng-click="vm.selectGame(game.id)"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </ion-content>
   </ion-pane>
-</ion-nav-view>
+</ion-view>
