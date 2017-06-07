@@ -8,6 +8,11 @@ angular
   function registrationCtrl(UserService, $location) {
     var vm = this;
 
+    vm.registerUser = registerUser
 
+    function registerUser() {
+      UserService.Create(vm.newUser)
+      $location.path('/')
+    }
 
   }

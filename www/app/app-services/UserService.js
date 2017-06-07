@@ -9,6 +9,7 @@ angular
 
     service.getByUsername = getByUsername;
     service.Login = Login;
+    service.Create = Create;
 
     return service;
 
@@ -29,6 +30,12 @@ angular
         }
         callback(response)
       })
+    }
+
+    function Create(newUser) {
+      return $http.post(`https://artemis-api.herokuapp.com/users`, newUser)
+      .then(handleSuccess, handleError('Error creating user'))
+      .then(console.log(newUser))
     }
 
   function handleSuccess(res) {
