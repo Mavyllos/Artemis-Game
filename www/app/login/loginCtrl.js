@@ -4,10 +4,10 @@ angular
   .module('artemisApp')
   .controller('loginCtrl', loginCtrl);
 
-  loginCtrl.$inject = ['UserService', '$location']
+  loginCtrl.$inject = ['UserService', '$location', 'GameInfoService']
 
 
-function loginCtrl(UserService, $location) {
+function loginCtrl(UserService, $location, GameInfoService) {
   var vm = this
 
   vm.login = login
@@ -15,6 +15,7 @@ function loginCtrl(UserService, $location) {
   function login () {
     UserService.Login(login.username, login.password, function (response) {
       if (response.success) {
+        GameInfoService.GetAllGames()
         $location.path('/app/dashboard');
       } else {
         console.log("nope");

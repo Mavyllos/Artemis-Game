@@ -24,6 +24,8 @@ angular
       .then(function (user) {
         user = user.result[0]
         if (user !== null && user.password === password) {
+          window.localStorage['userId'] = user.id
+           window.localStorage.getItem('userId')
           response = {success: true}
         } else {
           response = {success: false, message: 'Wrong username or password'}
