@@ -2,7 +2,38 @@
   <ion-pane>
     <ion-content class="has-tabs-top">
       <div>
-        <h1>I will be a form one day!</h1>
+        <form name="createGame" class="" novalidate form-manager>
+          <div class="list list-inset">
+            <label class="item item-input">
+              <input ng-model="game.name" name="gameName" type="text" placeholder="Name" required ng-minlength="2" ng-maxlength="70">
+            </label>
+            <label class="item item-input">
+              <input ng-model="game.description" name="gameDescription" type="text" placeholder="Description" required ng-maxlength="255">
+            </label>
+            <label class="item item-input">
+              <input ng-model="game.status" name="status" type="text" placeholder="Status" required ng-minlength="2" ng-maxlength="70">
+            </label>
+            <label class="item item-input">
+              <input ng-model="game.start_time" name="startTime" type="text" placeholder="Start Time" required>
+            </label>
+            <label class="item item-input">
+              <input ng-model="game.start_loc_lat" name="startLocLat" type="text" placeholder="Start Location Latitude" required>
+            </label>
+            <label class="item item-input">
+              <input ng-model="game.long" name="startLocLong" type="text" placeholder="Start Location Longitude" required>
+            </label>
+          </div>
+
+
+          <div class="padding container">
+            <div class="row">
+              <button class="button button-assertive button-small col col-40"> Cancel </button>
+              <!-- ng-click="reset()" -->
+              <button class="button button-balanced  button-small col col-40 col-offset-10"> Submit </button>
+              <!-- ng-click="submit()" -->
+            </div>
+          </div>
+        </form>
       </div>
     </ion-content>
   </ion-pane>
