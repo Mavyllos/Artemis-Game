@@ -7,3 +7,16 @@
 .alignright {
   float: right;
 }
+
+.verticalLine {
+  border-left: thin solid lightgrey;
+}
+
+.noborder {
+  border: none;
+}
+
+.alignmarginright {
+  float: right;
+  margin-right: 15px;
+}

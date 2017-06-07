@@ -1,27 +1,54 @@
 <ion-view>
   <ion-pane>
     <ion-content class="has-tabs-top">
-      <div>
-      <br>
-        <p><span><b>Name: &nbsp;</b></span>{{game.name}}</p>
-        <p><span><b>Status: &nbsp;</b></span>{{game.status}}</p>
-        <p><b>Description: &nbsp;</b></p>
-        <p>{{game.desciption}}</p>
-        <p><span><b>When: &nbsp;</b></span>{{game.start_time | date: "MM/dd/yyyy 'at' h:mma"}}</p>
-        <p><span><b>Where: &nbsp;</b></span><a href="http://maps.google.com/?q=47.600506,-122.333224" target="_blank">Click here for directions</a></p>
-        <iframe
-          width="250"
-          height="200"
-          frameborder="0" style="border:0"
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCiCYfdcXWF0z_Zmb1JFqJORxubR2-sjLs
-            &q=47.600506,-122.333224">
-        </iframe>
-      <hr>
-      <div class="">
-      <p><b>Players: &nbsp;</b></p>
-        <!-- <div ng-repeat="player in vm.players"> -->
-        {{player.name}}
-        {{player.status}}
+      <div class="row">
+        <div class="col col-25">
+          <p><span><b>Status: </b></span>Pending</p>
+          <p><span><b>Date: </b></span>06/12/2017</p>
+          <p><span><b>Time: </b></span>9:00am</p>
+        </div>
+        <div class="col col-75 verticalLine">
+          <p><span><b>Name: &nbsp;</b></span><br>Mission Seattle</p>
+          <p><b>Description: &nbsp;</b></p>
+          <p>As spys, your mission will be to find various clues throughout the city and then rally at the final destination.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-80 col-offset-10">
+          <br>
+          <p><span><b>Where: &nbsp;</b></span><a href="http://maps.google.com/?q=47.600506,-122.333224" target="_blank">Click here for directions</a></p>
+          <iframe
+            width="250"
+            height="200"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCiCYfdcXWF0z_Zmb1JFqJORxubR2-sjLs
+              &q=47.600506,-122.333224">
+          </iframe>
+        </div>
+      </div>
+        <hr>
+      <div class="row">
+        <div class="col col-100">
+          <h5>
+            <span class="alignleft " style="margin-left:17px">Players</span>
+            <span class="alignright" style="margin-right:17px">Accepted?</span>
+          </h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-100">
+          <div class="list">
+            <ion-item>
+              <p class="alignleft">Daenerys Targaryen</p>
+              <!-- Will need an if/else to determine of icon is checked or blank based on accepted or declined -->
+              <i class="icon ion-android-checkbox-outline-blank alignmarginright"></i>
+            </ion-item>
+            <ion-item>
+              <p class="alignleft">Arya Stark</p>
+              <!-- Will need an if/else to determine of icon is checked or blank based on accepted or declined -->
+              <i class="icon ion-android-checkbox-outline alignmarginright"></i>
+            </ion-item>
+          </div>
         </div>
       </div>
     </ion-content>
