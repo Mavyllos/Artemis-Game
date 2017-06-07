@@ -68,7 +68,9 @@ angular.module('artemisApp', ['ionic'])
       url: '/create',
       views: {
         'mainContent': {
-          templateUrl: 'app/create/create-game.html'
+          templateUrl: 'app/create/create-game.html',
+          controller: 'createGameCtrl',
+          controllerAs: '$ctrl'
         }
       }
     })

@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "description": "An Ionic project",
     "dependencies": {
+        "bletourmy-cordova-plugin-geolocation": "^1.0.2-dev",
         "cordova-android": "^6.2.3",
         "cordova-plugin-console": "^1.0.7",
         "cordova-plugin-device": "^1.1.6",
