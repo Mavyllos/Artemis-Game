@@ -2,13 +2,27 @@
   <ion-pane>
     <ion-content class="has-tabs-top">
       <div>
-        <p><span><b>Name: &nbsp;</b></span>Game name</p>
+      <br>
+        <p><span><b>Name: &nbsp;</b></span>{{game.name}}</p>
+        <p><span><b>Status: &nbsp;</b></span>{{game.status}}</p>
         <p><b>Description: &nbsp;</b></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-        <p><span><b>When: &nbsp;</b></span>{{game.start_time | date: "MM/dd/yyyy 'at' h:mma"}} Time/Date</p>
-        <p><span><b>Where: &nbsp;</b></span><a href="http://maps.google.com/?q=47.600506,-122.333224">Click here for map</a></p>
-        <p><span><b>Name: &nbsp;</b></span>Game name</p>
-
+        <p>{{game.desciption}}</p>
+        <p><span><b>When: &nbsp;</b></span>{{game.start_time | date: "MM/dd/yyyy 'at' h:mma"}}</p>
+        <p><span><b>Where: &nbsp;</b></span><a href="http://maps.google.com/?q=47.600506,-122.333224" target="_blank">Click here for directions</a></p>
+        <iframe
+          width="250"
+          height="200"
+          frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCiCYfdcXWF0z_Zmb1JFqJORxubR2-sjLs
+            &q=47.600506,-122.333224">
+        </iframe>
+      <hr>
+      <div class="">
+      <p><b>Players: &nbsp;</b></p>
+        <!-- <div ng-repeat="player in vm.players"> -->
+        {{player.name}}
+        {{player.status}}
+        </div>
       </div>
     </ion-content>
   </ion-pane>

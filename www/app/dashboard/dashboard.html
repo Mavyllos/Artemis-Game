@@ -28,10 +28,18 @@
           <div class="card">
             <p class="text-center"><b>Upcoming Game: </b></p>
             <div class="item item-text-wrap text-center">
-            <p><b>Start Location: </b><br><a href="#">Pioneer Square, Seattle, WA</a></p>
-            <p><b>Start Date and Time: </b><br>July 5th, 2017 @ 6:00AM</p>
+            <p><b>Start Date and Time: </b><br>{{game.start_time | date: "MM/dd/yyyy 'at' h:mma"}}</p>
             <p><b>Description: </b><br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>{{game.description}}</p>
+            <p><b>Start Location: </b><br><a href="http://maps.google.com/?q=47.600506,-122.333224" target="_blank">Click here for directions</a></p>
+            <iframe
+              width="250"
+              height="200"
+              frameborder="0" style="border:0"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCiCYfdcXWF0z_Zmb1JFqJORxubR2-sjLs
+                &q=47.600506,-122.333224">
+            </iframe>
+            </p>
             </div>
           </div>
         </div>
