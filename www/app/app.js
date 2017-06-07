@@ -32,7 +32,9 @@ angular.module('artemisApp', ['ionic'])
 
     .state('register', {
       url:'/register',
-      templateUrl: 'app/registration/registration.html'
+      templateUrl: 'app/registration/registration.html',
+      controller: 'registrationCtrl',
+      controllerAs: '$ctrl'
     })
 
     .state('app.dashboard', {
