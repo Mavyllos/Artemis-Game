@@ -1,11 +1,11 @@
 (function(){
 
-  angular.module('artemisApp').controller('gamesCtrl', ['$state', 'artemisApi', gamesCtrl]);
+  angular.module('artemisApp').controller('gamesCtrl', ['$state', 'artemisApi', 'GameInfoService', gamesCtrl]);
 
-  function gamesCtrl($state, artemisApi) {
+  function gamesCtrl($state, artemisApi, GameInfoService) {
     const vm = this;
 
-    var games = artemisApi.getGames();
+    var games = GameInfoService.GetAllGames();
     console.log(games);
     vm.games = games;
 

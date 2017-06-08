@@ -7,7 +7,7 @@ angular
   function GameInfoService($http, $q) {
     var service = {};
     var userId = window.localStorage.getItem('userId');
-    var data = [];
+    var data = {}
 
     service.GetAllGames = GetAllGames
 
@@ -18,8 +18,13 @@ angular
        var games = $http.get(`https://artemis-api.herokuapp.com/games`)
        var game_user = $http.get(`https://artemis-api.herokuapp.com/game_user?user_id=${userId}`)
        $q.all([games, game_user]).then(result => {
-         console.log(result)
+         result[1]["data"]["result"].map(usersGames => {
+           data.games = result[0]["data"]["result"].filter(game => {
+             return usersGames.game_id === game.id
+           })
+         })
        })
+       return data.games
     }
 
 
