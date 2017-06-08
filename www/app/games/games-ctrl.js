@@ -3,9 +3,9 @@
   angular.module('artemisApp').controller('gamesCtrl', ['$state', 'artemisApi', 'GameInfoService', gamesCtrl]);
 
   function gamesCtrl($state, artemisApi, GameInfoService) {
-    const vm = this;
+    var vm = this;
 
-    GameInfoService.GetAllGames().then(gameArr => {
+    GameInfoService.GetAllGames().then(function(gameArr) {
       vm.games = gameArr
       console.log(vm.games)
     });
