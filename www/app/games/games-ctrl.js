@@ -5,9 +5,10 @@
   function gamesCtrl($state, artemisApi, GameInfoService) {
     const vm = this;
 
-    var games = GameInfoService.GetAllGames();
-    console.log(games);
-    vm.games = games;
+    GameInfoService.GetAllGames().then(gameArr => {
+      vm.games = gameArr
+      console.log(vm.games)
+    });
 
     vm.selectGame = function(id){
     $state.go("app.game-detail");
