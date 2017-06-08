@@ -82,8 +82,26 @@ angular.module('artemisApp', ['ionic'])
           templateUrl: 'app/invites/game-invites.html'
         }
       }
+    })
+
+    .state('app.clues', {
+      url: '/clue/:id',
+      views: {
+        'mainContent': {
+          templateUrl: 'app/clues/clues.html'
+        }
+      }
+    })
+
+    .state('app.questions', {
+      url: '/question/:id',
+      views: {
+        'mainContent': {
+          templateUrl: 'app/clues/questions.html'
+        }
+      }
     });
 
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/app/dashboard');
 
 });
