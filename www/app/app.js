@@ -102,6 +102,6 @@ angular.module('artemisApp', ['ionic'])
       }
     });
 
-  $urlRouterProvider.otherwise('/app/dashboard');
+  $urlRouterProvider.otherwise('/');
 
 });
