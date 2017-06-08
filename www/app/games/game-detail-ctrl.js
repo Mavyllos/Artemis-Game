@@ -13,4 +13,4 @@
     $state.go("app.game-detail");
   };
   }
-}());
+}()); 
