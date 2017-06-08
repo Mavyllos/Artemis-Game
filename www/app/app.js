@@ -84,20 +84,20 @@ angular.module('artemisApp', ['ionic'])
       }
     })
 
-    .state('app.clues', {
-      url: '/clue/:id',
+    .state('app.questions', {
+      url: '/questions/:id',
       views: {
         'mainContent': {
-          templateUrl: 'app/clues/clues.html'
+          templateUrl: 'app/clues/questions.html'
         }
       }
     })
 
-    .state('app.questions', {
-      url: '/question/:id',
+    .state('app.clues', {
+      url: '/clues/:id',
       views: {
         'mainContent': {
-          templateUrl: 'app/clues/questions.html'
+          templateUrl: 'app/clues/clues.html'
         }
       }
     });
