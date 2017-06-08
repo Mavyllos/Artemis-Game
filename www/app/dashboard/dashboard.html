@@ -1,27 +1,31 @@
 <ion-view>
   <ion-pane>
-    <ion-content class="has-tabs-top">
+    <ion-content class="has-tabs-top fullmap-bkg">
       <div class="row">
         <div class="col col-50">
           <div class="card">
-            <div class="item item-text-wrap text-center"><p><b>Total Games: </b><br>19</p></div>
+            <p class="text-center"><b>Total Games: </b></p>
+            <div class="item item-text-wrap text-center"><p style="font-size: 18px"><b>2</b></p></div>
           </div>
         </div>
         <div class="col col-50">
           <div class="card">
-            <div class="item item-text-wrap text-center"><p><b>Joined Games: </b><br>2</p></div>
+            <p class="text-center"><b>Joined Games: </b></p>
+            <div class="item item-text-wrap text-center"><p style="font-size: 18px"><b>2</b></p></div>
           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="col col-80 col-offset-10">
-          <div class="card">
-            <p class="text-center"><b>Notifications</b></p>
-            <div class="item item-text-wrap text-center"><p><b>Pending Invites: </b><br><a ui-sref="app.invites">3</a></p></div>
-          </div>
+        <div class="col col-60 col-offset-20">
+          <a ui-sref="app.invites" style="text-decoration:none; color:black"><div class="card">
+            <p class="text-center" ><b>View Pending Invites: </b></p>
+            <div class="item item-text-wrap text-center"><p style="font-size: 18px"><b>2</b></p></div>
+          </div></a>
         </div>
       </div>
+
+<!-- ui-sref="app.invites" -->
 
       <div class="row">
         <div class="col col-100">
@@ -31,7 +35,7 @@
             <p><b>Start Date and Time: </b><br>{{game.start_time | date: "MM/dd/yyyy 'at' h:mma"}}</p>
             <p><b>Description: </b><br>
             <p>{{game.description}}</p>
-            <p><b>Start Location: </b><br><a href="http://maps.google.com/?q=47.600506,-122.333224" target="_blank">Click here for directions</a></p>
+            <p><b>Start Location: </b><br></p>
             <iframe
               width="250"
               height="200"
@@ -39,12 +43,13 @@
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCiCYfdcXWF0z_Zmb1JFqJORxubR2-sjLs
                 &q=47.600506,-122.333224">
             </iframe>
+            <br>
+            <p style="font-size: 18px">Click map for directions</p>
             </p>
             </div>
           </div>
         </div>
       </div>
-
     </ion-content>
   </ion-pane>
 </ion-view>

@@ -25,11 +25,64 @@
   margin: 0 auto;
 }
 
-.card-bkg {
-  background-image: url("https://www.colourbox.com/preview/2874769-old-treasure-map-isolated-on-a-white-background.jpg");
+.logo-bkg {
+  background-image: url("../img/artemis-bkg.png");
+  background-size: cover;
+}
+
+.fullmap-bkg {
+  background-image: url("../img/fullmap-bkg.png");
+  background-size: cover;
+}
+
+.partialmap-bkg {
+  background-image: url("../img/partialmap-bkg.png");
+  background-size: cover;
+}
+
+.partialmap2-bkg {
+  background-image: url("../img/partialmap2-bkg.png");
+  background-size: cover;
+}
+
+.partialmap3-bkg {
+  background-image: url("../img/partialmap3-bkg.png");
+  background-size: cover;
+}
+
+.partialmap4-bkg {
+  background-image: url("../img/partialmap4-bkg.png");
   background-size: cover;
 }
 
 .card-login {
   margin-top: 186px;
+}
+
+.card-register {
+  margin-top: 135px;
+}
+
+a {
+  color: #e37222;
+}
+
+i,.icon {
+  color: #c25e00;
+}
+
+.tab-title {
+  color: #ab4400;
+}
+
+.active {
+  border-color: #ac1900;
+}
+
+.teal-bkg {
+  background-color: #63b4ba;
+}
+
+.blah {
+  font-size: 20px;
 }

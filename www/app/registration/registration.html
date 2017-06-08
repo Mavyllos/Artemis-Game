@@ -1,40 +1,41 @@
 
 <ion-view="registration">
-  <ion-content>
-    <form name="$ctrl.registerForm" ng-submit="$ctrl.registerUser()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="$ctrl.newUser.user_name" placeholder="Name used to login">
-        </label>
+  <ion-content class="logo-bkg">
+    <div class="card card-register">
+      <form name="$ctrl.registerForm" ng-submit="$ctrl.registerUser()">
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Username</span>
+            <input type="text" ng-model="$ctrl.newUser.user_name" placeholder="Name used to login">
+          </label>
 
-        <label class="item item-input">
-          <span class="input-label">Display Name</span>
-          <input type="text" ng-model="$ctrl.newUser.display_name" placeholder="Name used when hunting">
-        </label>
+          <label class="item item-input">
+            <span class="input-label">Display Name</span>
+            <input type="text" ng-model="$ctrl.newUser.display_name" placeholder="Name used when hunting">
+          </label>
 
-        <label class="item item-input">
-          <span class="input-label">Email</span>
-          <input type="email" ng-model="$ctrl.newUser.email" placeholder="Enter Email">
-        </label>
+          <label class="item item-input">
+            <span class="input-label">Email</span>
+            <input type="email" ng-model="$ctrl.newUser.email" placeholder="Enter Email">
+          </label>
 
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="$ctrl.newUser.password" placeholder="Enter Password">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Icon</span>
-          <select ng-model="$ctrl.newUser.icon" convert-to-number>
-            <option value="1">1</option>
-          </select>
-        </label>
+          <label class="item item-input">
+            <span class="input-label">Password</span>
+            <input type="password" ng-model="$ctrl.newUser.password" placeholder="Enter Password">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Icon</span>
+            <select ng-model="$ctrl.newUser.icon" convert-to-number>
+              <option value="1">1</option>
+            </select>
+          </label>
 
-        <label class="item">
-          <button class="button button-block button-positive" name="Register">Register Account</button>
-        </label>
+          <label class="item">
+            <button class="button button-block button-positive" name="Register" style="background:#e37222; color:white;">Register Account</button>
+          </label>
 
-      </div>
-
-    </form>
-  </ion-content>
+        </div>
+      </form>
+    </ion-content>
+  </div>
 </ion-view>
