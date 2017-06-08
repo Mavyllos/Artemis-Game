@@ -59,6 +59,7 @@
     $state.go("app.game-detail");
   };
   }
+<<<<<<< HEAD
 
   function getMeridian(time) {
     if (time.slice(0, 2) >= 12) {
@@ -69,3 +70,6 @@
   }
 
 }());
+=======
+}()); 
+>>>>>>> 79448c91320f16f4f89a5aacbcba8207407b6fe8
