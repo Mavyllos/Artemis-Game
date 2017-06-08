@@ -1,23 +1,29 @@
 <ion-view="login">
-  <ion-content>
-    <form name="$ctrl.loginForm" ng-submit="$ctrl.login()">
-      <div class="list">
+  <ion-content class="card-bkg">
+    <div class="card card-login">
+        <div class="row">
+          <div class="col col-center">
+          <form name="$ctrl.loginForm" ng-submit="$ctrl.login()">
+            <div class="list">
 
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="$ctrl.login.username" placeholder="Enter Username" required>
-        </label>
+              <label class="item item-input">
+                <span class="input-label">Username</span>
+                <input type="text" ng-model="$ctrl.login.username" placeholder="Enter Username" required>
+              </label>
 
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="$ctrl.login.password" placeholder="Enter Password" required>
-        </label>
+              <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" ng-model="$ctrl.login.password" placeholder="Enter Password" required>
+              </label>
 
-        <label class="item">
-          <button class="button button-block button-positive" name="Login">Login</button>
-        </label>
-      </div>
-    </form>
-    <a a ui-sref="register">Create Account</a>
+              <label class="item">
+                <button class="button button-block" name="Login" style="background:#ff9800; color:white;">Login</button>
+              </label>
+            </div>
+          </form>
+          <a href="#/register" style="color:#c66900">Create Account</a>
+          </div>
+        </div>
+    </div>
   </ion-content>
 </ion-view>
