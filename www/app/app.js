@@ -48,6 +48,8 @@ angular.module('artemisApp', ['ionic'])
 
     .state('app.games', {
       url: '/games',
+      controller: 'loginCtrl',
+      controllerAs: '$ctrl',
       views: {
         'mainContent': {
           templateUrl: 'app/games/games.html'

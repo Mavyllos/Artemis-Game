@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 angular
   .module('artemisApp')
   .factory('GameInfoService', GameInfoService)
@@ -6,7 +6,6 @@ angular
 
   function GameInfoService($http, $q) {
     var service = {};
-    var userId = window.localStorage.getItem('userId');
     var data = {}
 
     service.GetAllGames = GetAllGames

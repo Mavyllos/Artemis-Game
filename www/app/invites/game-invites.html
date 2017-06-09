@@ -3,10 +3,12 @@
     <ion-content class="has-tabs-top partialmap2-bkg">
       <div class="list">
         <div class="item item-icon-right"
-            ng-repeat="invite in vm.gameInvites | filter:{invite_status:'pending'}">
+            ng-repeat="invite in vm.invites">
             <p>
-              <span class="alignleft"><b>Name: </b><br>Name should appear here</span>
-              <span class="alignright"><b>Status: </b><br>{{invite.invite_status}}</span>
+              <span class="alignleft"><b>Name:</b><br>{{invite.gameInfo.name}}</span>
+            </p>
+            <p>
+              <span class="alignLeft"></span><b>Description:</b><br>{{invite.gameInfo.description}}</br></span>
             </p>
             <br>
             <p>

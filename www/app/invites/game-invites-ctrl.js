@@ -1,16 +1,14 @@
 (function(){
 
-  angular.module('artemisApp').controller('gameInvitesCtrl', ['$state', 'artemisApi', gameInvitesCtrl]);
+  angular.module('artemisApp').controller('gameInvitesCtrl', ['$state', 'InviteService', gameInvitesCtrl]);
 
-  function gameInvitesCtrl($state, artemisApi) {
-    const vm = this;
+  function gameInvitesCtrl($state, InviteService) {
+    var vm = this;
 
-    var gameInvites = artemisApi.getGameInvites();
-    var games = artemisApi.getGames();
-    console.log(gameInvites);
-    console.log(games);
-    vm.gameInvites = gameInvites;
-    vm.games = games;
+    InviteService.GetInvites().then(function(inviteArr) {
+      vm.invites = inviteArr
+      console.log(vm.invite)
+    });
 
     vm.selectGame = function(id){
     $state.go("app.game-detail");

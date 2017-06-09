@@ -7,7 +7,7 @@ angular
   loginCtrl.$inject = ['UserService', '$location', 'GameInfoService']
 
 
-function loginCtrl(UserService, $location, GameInfoService) {
+function loginCtrl(UserService, $location, GameInfoService, InviteService) {
   var vm = this
 
   vm.login = login
