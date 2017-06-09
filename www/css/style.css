@@ -100,3 +100,7 @@ b, span, p.item {
 .large-card {
   font-size: 26px;
 }
+
+.round-border {
+  border-radius: 10px 10px 10px 10px;
+}
