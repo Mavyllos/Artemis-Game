@@ -1,20 +1,25 @@
 <ion-view>
   <ion-pane>
-    <ion-content class="has-tabs-top">
-      <div class="card">
-        <div class="text-center">
-          <h4>Looks like you are close! Can you answer this question?</h4>
+    <ion-content class="has-tabs-top partialmap3-bkg">
+      <div class="row">
+        <div class="col col-100">
+          <div class="card cardheader-bkg round-border">
+            <div class="text-center">
+              <h4>Looks like you are close! Can you answer this question?</h4>
+            </div>
+            <div class="item item-text-wrap text-center cardbody-bkg">
+              <p style="margin:10px">What store is located at the base of the ICON building?</p>
+              <label class="item item-input">
+                <input ng-model="question" name="question" type="text" placeholder="Question" required ng-minlength="2" ng-maxlength="70">
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <a href="#/app/correct/correct"><button class="button button-dark" style="margin-left:120px">Check Guess</button><a>
+            </div>
+          </div>
         </div>
-        <hr>
-        <div class="">
-          <p style="margin:10px">What store is located at the base of the ICON building?</p>
-          <label class="item item-input">
-            <input ng-model="question" name="question" type="text" placeholder="Question" required ng-minlength="2" ng-maxlength="70">
-          </label>
-        </div>
-      </div>
-      <div>
-        <a href="#/app/clues/clues"<button class="button button-dark" style="margin-left:120px" ng-click="">Check Guess</button></a>
       </div>
     </ion-content>
   </ion-pane>
