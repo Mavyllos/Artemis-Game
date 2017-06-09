@@ -23,11 +23,21 @@
               <input ng-model="game.long" name="startLocLong" type="text" placeholder="Start Location Longitude" required>
             </label>
           </div>
+          <div>
+        <form name="createGame" class="" novalidate form-manager>
+          <div class="list list-inset">
+            <label class="item item-input icon-left">
+              <div><i class="icon ion-person-add icon-accessory"></i></div>&nbsp;&nbsp;
+              <div><input ng-model="game.player(playerAdd())" name="startLocLong" type="text" placeholder="Add Player" required></div>
+            </label>
+          </div>
+        </div>
+      </form>
 
 
           <div class="padding container">
             <div class="row">
-              <button class="button button-assertive button-small col col-40"> Cancel </button>
+              <button class="button button-assertive button-small col col-40" style="margin-left:20px"> Cancel </button>
               <!-- ng-click="reset()" -->
               <button ng-click="$ctrl.checkTarget()" class="button button-balanced  button-small col col-40 col-offset-10"> Submit </button>
               <!-- ng-click="submit()" -->

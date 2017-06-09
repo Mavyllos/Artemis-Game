@@ -2,19 +2,20 @@
   <ion-pane>
     <ion-content class="has-tabs-top partialmap2-bkg">
       <div class="list">
-        <div class="item item-icon-right"
+        <div class="item item-icon-right cardbody-bkg"
             ng-repeat="invite in vm.invites">
             <p>
               <span class="alignleft"><b>Name:</b><br>{{invite.gameInfo.name}}</span>
             </p>
+            <br>
             <p>
-              <span class="alignLeft"></span><b>Description:</b><br>{{invite.gameInfo.description}}</br></span>
+              <span class="alignLeft"></span><b>Description:</b><br><span style="color:#000 !important">{{invite.gameInfo.description}}</span></br></span>
             </p>
             <br>
             <p>
             <ion-buttons start>
-              <button class="button button-small button-balanced">Accept</button>&nbsp;
-              <button class="button button-small button-assertive">Decline</button>
+              <button class="button button-small button-balanced">Accept Invite</button>&nbsp;
+              <button class="button button-small button-assertive">Decline Invite</button>
             </p>
             </ion-buttons start>
             <i class="icon ion-chevron-right icon-accessory" ng-click="vm.selectGame(game.id)"></i>

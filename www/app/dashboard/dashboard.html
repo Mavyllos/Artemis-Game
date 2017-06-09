@@ -3,24 +3,24 @@
     <ion-content class="has-tabs-top fullmap-bkg">
       <div class="row">
         <div class="col col-50">
-          <div class="card">
+          <div class="card cardheader-bkg">
             <p class="text-center"><b>Total Games: </b></p>
-            <div class="item item-text-wrap text-center"><p style="font-size: 18px"><b>2</b></p></div>
+            <div class="item item-text-wrap text-center cardbody-bkg"><h1>9</h1></div>
           </div>
         </div>
         <div class="col col-50">
-          <div class="card">
+          <div class="card cardheader-bkg">
             <p class="text-center"><b>Joined Games: </b></p>
-            <div class="item item-text-wrap text-center"><p style="font-size: 18px"><b>2</b></p></div>
+            <div class="item item-text-wrap text-center cardbody-bkg"><h1>2</h1></div>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col col-60 col-offset-20">
-          <a ui-sref="app.invites" style="text-decoration:none; color:black"><div class="card">
+          <a ui-sref="app.invites" style="text-decoration:none; color:black"><div class="card cardheader-bkg">
             <p class="text-center" ><b>View Pending Invites: </b></p>
-            <div class="item item-text-wrap text-center"><p style="font-size: 18px"><b>2</b></p></div>
+            <div class="item item-text-wrap text-center cardbody-bkg"><h1>3</h1></div>
           </div></a>
         </div>
       </div>
@@ -29,23 +29,15 @@
 
       <div class="row">
         <div class="col col-100">
-          <div class="card">
+          <div class="card cardheader-bkg">
             <p class="text-center"><b>Upcoming Game: </b></p>
-            <div class="item item-text-wrap text-center">
-            <p><b>Start Date and Time: </b><br>{{game.start_time | date: "MM/dd/yyyy 'at' h:mma"}}</p>
-            <p><b>Description: </b><br>
-            <p>{{game.description}}</p>
-            <p><b>Start Location: </b><br></p>
-            <iframe
-              width="250"
-              height="200"
-              frameborder="0" style="border:0"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCiCYfdcXWF0z_Zmb1JFqJORxubR2-sjLs
-                &q=47.600506,-122.333224">
-            </iframe>
-            <br>
-            <p style="font-size: 18px">Click map for directions</p>
-            </p>
+            <div class="item item-text-wrap text-center cardbody-bkg" id="card-item">
+            <p><b>Start Date and Time: </b><br><span>06/12/2017 at 9:00am</span></p>
+            <p><b>Name: </b><br>
+            <p><span>Mission Seattle<span></p>
+            <p><b>Description: </b><br></p>
+            <p><span>As spies, your mission will be to find various clues throughout the city and then rally at the final destination.</span></p>
+            <p><a href="http://maps.google.com/?q=47.600506,-122.333224" target="_blank">Click here for directions</a></p>
             </div>
           </div>
         </div>

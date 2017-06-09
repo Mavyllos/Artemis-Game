@@ -64,7 +64,7 @@
 }
 
 a {
-  color: #e37222;
+  color: #ab4400;
 }
 
 i,.icon {
@@ -83,6 +83,20 @@ i,.icon {
   background-color: #63b4ba;
 }
 
-.blah {
-  font-size: 20px;
+.cardheader-bkg {
+  background-color: #ffd18e;
+  border-color: #ab4400;
+}
+
+.cardbody-bkg {
+  background-color: #eacd9e;
+  border-color: #ab4400;
+}
+
+b, span, p.item {
+  color: black !important;
+}
+
+.large-card {
+  font-size: 26px;
 }
