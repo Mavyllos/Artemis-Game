@@ -102,6 +102,15 @@ angular.module('artemisApp', ['ionic'])
           templateUrl: 'app/clues/clues.html'
         }
       }
+    })
+
+    .state('app.correct', {
+      url: '/correct/:id',
+      views: {
+        'mainContent': {
+          templateUrl: 'app/clues/correct.html'
+        }
+      }
     });
 
   $urlRouterProvider.otherwise('/');
