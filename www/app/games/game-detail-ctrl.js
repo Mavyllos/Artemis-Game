@@ -1,75 +1,38 @@
 (function(){
 
-  angular.module('artemisApp').controller('gameDetailCtrl', ['$state', 'artemisApi', '$stateParams', '$http', '$q',gameDetailCtrl]);
+  angular.module('artemisApp').controller('gameDetailCtrl', ['$state', 'artemisApi', '$stateParams', '$http', '$q', 'GameSingle' ,gameDetailCtrl]);
 
-  function gameDetailCtrl($state, artemisApi, $stateParams, $http, $q) {
-    const vm = this;
+  function gameDetailCtrl($state, artemisApi, $stateParams, $http, $q, GameSingle) {
+    var vm = this;
 
     var games = artemisApi.getGames();
     vm.games = games;
 
-    window.localStorage['gameId'] = 1;
-    var id = window.localStorage['gameId'];
-    console.log("game id", id);
+    // window.localStorage['gameId'] = 1;
+    // var id = window.localStorage['gameId'];
 
-    var playerData = $http.get(`https://artemis-api.herokuapp.com/games/?id=${id}`);
-    var usersData = $http.get(`https://artemis-api.herokuapp.com/users`);
-    var gameInviteData = $http.get(`https://artemis-api.herokuapp.com/game_invite/?game_id=${id}`);
-    $q.all([playerData, usersData, gameInviteData])
-      .then(function(results){
-        console.log(results[0].data.result[0]);
-        console.log(results[1].data.result);
-        console.log(results[2].data.result);
+    // var singleGameObject = {name:"Test name"};
+    // vm.singleGameObject = singleGameObject
 
-        var gameDetails = results[0].data.result[0];
-        var users = results[1].data.result;
-        var status = results[2].data.result;
-        var dateYear = gameDetails.start_time.slice(0, 4);
-        var dateMonth = gameDetails.start_time.slice(5, 7);
-        var dateDay = gameDetails.start_time.slice(8, 10);
-        var gameDateFormated = `${dateMonth}/${dateDay}/${dateYear}`;
-        var dateTime = gameDetails.start_time.slice(11, 16);
-        var dateMeridian = getMeridian(dateTime);
-        var gameTimeFormated = `${dateTime} ${dateMeridian}`;
+    // GameSingle.testFunc().then(function(dataOUT){
+    //   vm.test = dataOUT.result[1].invite_status
+    //   singleGameObject.name = dataOUT.result[1].invite_status
+    //   console.log(dataOUT.result[1].invite_status);
+    //
+    // })
+    //
+    // GameSingle.loadPageWithData().then(function(singleGameDate){
+    //   vm.singleGameObject = singleGameDate
+    //   console.log(singleGameDate);
+    // })
 
-        console.log(gameDateFormated);
-        console.log(gameTimeFormated)
-
-        //builds and populates the playerStatus array of objects for single game display
-        var playerStatus = []
-        users.map(element => {
-          status.forEach(ele => {
-            // console.log(element);
-            if (element.id === ele.user_id) {
-              if (ele.invite_status != "declined") {
-                playerStatus.push({
-                  name: element.display_name,
-                  status: ele.invite_status
-                })
-              }
-            }
-          })
-        })
-
-
-      })
-
+    // console.log(singleGameObject);
 
     vm.selectGame = function(id){
-    $state.go("app.game-detail");
-  };
+      $state.go("app.game-detail");
+    };
   }
-<<<<<<< HEAD
 
-  function getMeridian(time) {
-    if (time.slice(0, 2) >= 12) {
-      return "PM"
-    } else {
-      return "AM"
-    }
-  }
+
 
 }());
-=======
-}()); 
->>>>>>> 79448c91320f16f4f89a5aacbcba8207407b6fe8

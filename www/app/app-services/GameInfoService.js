@@ -17,7 +17,7 @@ angular
       var userId = window.localStorage.getItem('userId')
        var games = $http.get(`https://artemis-api.herokuapp.com/games`)
        var game_user = $http.get(`https://artemis-api.herokuapp.com/game_user?user_id=${userId}`)
-       $q.all([games, game_user]).then(result => {
+       $q.all([games, game_user]).then(function(result) {
          console.log(result)
        })
     }
