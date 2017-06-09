@@ -97,6 +97,10 @@ i,.icon {
   border-color: #ab4400;
 }
 
+.card-padding {
+  padding-top: 7px:
+}
+
 b, span, p.item {
   color: black !important;
 }
