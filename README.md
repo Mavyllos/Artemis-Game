@@ -1,25 +1,49 @@
-Ionic App Base
-=====================
+# Artemis - G48 Quarter 3 Project
 
-A starting project for Ionic that optionally supports using custom SCSS.
+## What is Artemis?
 
-## Using this project
+Artemis is a mobile scavenger hunt application for Android devices, developed and designed by G48 Web Developments students Donny Barclay, Joshua Warren, and Summer Barclay.
 
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
+As all three of our team members are new to the area, the idea of Artemis came to us as a way to meet new people, explore your surroundings, and get in some exercise. Intuitive accessibility between the various features was our main priorities when designing the interface.
 
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+### Features
 
-```bash
-$ npm install -g ionic
-```
+Users can quickly create a new game, entering in their own clues and hints, invite users to a newly created game, accept invitations for upcoming games, view details on accepted hunts, or join an in-progress hunt.
 
-Then run: 
+#### Login
+![](/www/img/artemis-login.png)
 
-```bash
-$ ionic start myProject tabs
-```
+#### Dashboard
+![](/www/img/artemis-dashboard.png)
 
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
+#### My Games
+![](/www/img/artemis-my-games.png)
 
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+#### Game Details
+![](/www/img/artemis-game-details1.png)
+![](/www/img/artemis-game-details2.png)
+
+#### Create a New Game
+![](/www/img/artemis-create.png)
+
+#### View Invitations
+![](/www/img/artemis-invites.png)
+
+## Technologies
+* AngularJS
+* Ionic
+* Apache Cordova
+* PostgreSQL
+* JavaScript
+* Express.js
+* Node.js
+* API deployed on Heroku
+  * [Click here to view the API README](https://github.com/Doubleshot1122/artemis_api)
+
+## Development Team
+- Donny Barclay
+  - [Click here to view Donny’s github](https://github.com/Doubleshot1122)
+- Joshua Warren
+  - [Click here to view Joshua’s github](https://github.com/Shiftyfive)
+- Summer Barclay
+  - [Click here to view Summer’s github](https://github.com/Mavyllos)
