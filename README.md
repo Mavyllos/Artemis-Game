@@ -23,6 +23,10 @@ Users can quickly create a new game, entering in their own clues and hints, invi
 ![](/www/img/artemis-game-details1.png)
 ![](/www/img/artemis-game-details2.png)
 
+#### Game Play
+![](/www/img/artemis-hint.png)
+![](/www/img/artemis-check-location.png)
+
 #### Create a New Game
 ![](/www/img/artemis-create.png)
 
