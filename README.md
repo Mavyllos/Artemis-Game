@@ -2,9 +2,9 @@
 
 ## What is Artemis?
 
-Artemis is a mobile scavenger hunt application for Android devices, developed and designed by G48 Web Developments students Donny Barclay, Joshua Warren, and Summer Barclay.
+Artemis is a mobile scavenger hunt application for Android devices, developed and designed by G48 Web Development students Donny Barclay, Joshua Warren, and Summer Barclay.
 
-As all three of our team members are new to the area, the idea of Artemis came to us as a way to meet new people, explore your surroundings, and get in some exercise. Intuitive accessibility between the various features was our main priorities when designing the interface.
+As all three of our team members are new to the area, the idea of Artemis came to us as a way to meet new people, explore your surroundings, and get exercise. Intuitive accessibility between the various features was our main priorities when designing the interface.
 
 ### Features
 
