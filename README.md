@@ -8,7 +8,7 @@ As we were all new to Seattle, the idea of Artemis came to us as a way to meet n
 
 ### Features
 
-Users can quickly create a new game, with custom clues and hints,  invite users to an existing game, accept invitations for upcoming games, view details on accepted games, or join an in-progress game.
+Users can quickly create a new game, with custom clues and hints, invite users to an existing game, accept invitations for upcoming games, view details on accepted games, or join an in-progress game.
 <div>
   <details>
     <summary>Login</summary>
